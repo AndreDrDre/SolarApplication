@@ -1,0 +1,64 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceAssemblyReference>true</ProduceAssemblyReference>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <CustomCommands>
+      <CustomCommands>
+        <Command>
+          <type>BeforeBuild</type>
+          <command>nuget restore ${SolutionDir}/${SolutionName}.sln</command>
+          <workingdir>/Library/Frameworks/Mono.framework/Versions/Current/bin/</workingdir>
+        </Command>
+      </CustomCommands>
+    </CustomCommands>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1269" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
+    <PackageReference Include="sqlite-net-pcl" Version="1.7.335" />
+  </ItemGroup>
+<ItemGroup>
+	<PackageReference Include="Syncfusion.Xamarin.SfRangeSlider" Version="18.2.0.48" />
+</ItemGroup>
+<ItemGroup>
+	<PackageReference Include="Syncfusion.Xamarin.SfProgressBar" Version="18.2.0.48" />
+</ItemGroup>
+<ItemGroup>
+	<PackageReference Include="Syncfusion.Xamarin.SfMaps" Version="18.2.0.48" />
+</ItemGroup>
+<ItemGroup>
+	<PackageReference Include="Syncfusion.Xamarin.Buttons" Version="18.2.0.48" />
+</ItemGroup>
+<ItemGroup>
+	<PackageReference Include="Syncfusion.Xamarin.SfAutoComplete" Version="18.2.0.48" />
+</ItemGroup>
+<ItemGroup>
+  <Folder Include="Models\" />
+  <Folder Include="Views\" />
+  <Folder Include="Controllers\" />
+  <Folder Include="Images\" />
+  <Folder Include="CalulationControllers\" />
+  <Folder Include="Persistance\" />
+</ItemGroup>
+<ItemGroup>
+  <None Remove="Images\InstaIcon.png" />
+  <None Remove="Images\FacebookIcon.png" />
+  <None Remove="Images\wwwIcon.png" />
+  <None Remove="Images\microcarelogo.png" />
+  <None Remove="Images\GettyImages-871613394.jpg" />
+</ItemGroup>
+<ItemGroup>
+  <EmbeddedResource Include="Images\InstaIcon.png" />
+  <EmbeddedResource Include="Images\FacebookIcon.png" />
+  <EmbeddedResource Include="Images\wwwIcon.png" />
+  <EmbeddedResource Include="Images\microcarelogo.png" />
+  <EmbeddedResource Include="Images\GettyImages-871613394.jpg" />
+</ItemGroup>
+</Project>

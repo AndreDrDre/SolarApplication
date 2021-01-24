@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SolarForMe.Views.HomePage"
+             NavigationPage.HasNavigationBar="False">
+
+
+    <Grid>
+
+       <!-- <Image Aspect="AspectFit" x:Name="SolarPanel" Grid.ColumnSpan="3" Grid.RowSpan="7" Opacity="0.5"/>-->
+        <Image Aspect="AspectFit" x:Name="SolarLogo" Grid.ColumnSpan="3" Grid.Row="1" Grid.Column="0" Margin="5"/>
+
+        <Label Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" VerticalOptions="End" Text="Find us on Social Media @:" HorizontalOptions="Center" FontSize="18"/>
+
+        <StackLayout Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="3" Margin="20,5,20,50">
+            <StackLayout.Spacing>
+            <OnPlatform x:TypeArguments="x:Double"
+                        iOS="20"
+                        Android="15" />
+        </StackLayout.Spacing>
+
+            <Button BackgroundColor="Black" CornerRadius="18" TextColor="White" FontSize="18" FontAttributes="Bold" Text="Login"  HeightRequest="40" Opacity="0.9" Margin="10,0,10,0" Clicked="Login_Clicked"/>
+            <Button BackgroundColor="Black" CornerRadius="18" TextColor="White" FontSize="18" FontAttributes="Bold" Text="Sign Up"  HeightRequest="40" Opacity="0.9" Margin="10,0,10,0" Clicked="SignUp_Clicked"/>
+            <Button BackgroundColor="Black" CornerRadius="18" TextColor="White" FontSize="18" FontAttributes="Bold" Text="Why go Solar?"  HeightRequest="40" Opacity="0.9" Margin="10,0,10,0"/>
+            <Button BackgroundColor="Black" CornerRadius="18" TextColor="White" FontSize="18" FontAttributes="Bold" Text="Free Training? Book Now!"  HeightRequest="40" Opacity="0.9" Margin="10,0,10,0"/>
+        </StackLayout>
+
+        <StackLayout Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="3" Margin="60,20,60,50" Spacing="10" VerticalOptions="Start" Orientation="Horizontal">
+            <ImageButton CornerRadius="20" x:Name="Insta" Grid.Row="8" Grid.Column="0" HeightRequest="65" WidthRequest="65" HorizontalOptions="StartAndExpand" Clicked="Insta_Clicked"/>
+            <ImageButton CornerRadius="20" x:Name="Facebook" Grid.Row="8" Grid.Column="1" HeightRequest="65" WidthRequest="65" HorizontalOptions="CenterAndExpand" Clicked="Facebook_Clicked"/>
+            <ImageButton CornerRadius="20" x:Name="wwwWeb" Grid.Row="8" Grid.Column="2" HeightRequest="65" WidthRequest="65" HorizontalOptions="EndAndExpand" Clicked="wwwWeb_Clicked"/>
+        </StackLayout>
+
+
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="2" />
+
+        </Grid.RowDefinitions>
+    </Grid>
+
+
+
+</ContentPage>
+

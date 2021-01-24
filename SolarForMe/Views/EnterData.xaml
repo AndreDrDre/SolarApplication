@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SolarForMe.Views.EnterData">
+
+    <StackLayout Orientation="Vertical" VerticalOptions="Center">
+        <StackLayout.Spacing>
+            <OnPlatform x:TypeArguments="x:Double"
+                        iOS="18"
+                        Android="10" />
+        </StackLayout.Spacing>
+
+        <Button BackgroundColor="Black" CornerRadius="18" TextColor="White" FontSize="18" FontAttributes="Bold" Text="User Guide"  HeightRequest="40" Opacity="0.9" Margin="10,0,10,0"/>
+        <Button BackgroundColor="Black" CornerRadius="18" TextColor="White" FontSize="18" FontAttributes="Bold" Text=" 1 : Monthly kWh"  HeightRequest="40" Opacity="0.9" Margin="10,0,10,0"/>
+        <Button BackgroundColor="Black" CornerRadius="18" TextColor="White" FontSize="18" FontAttributes="Bold" Text="2 : Roof Area"  HeightRequest="40" Opacity="0.9" Margin="10,0,10,0"/>
+        <Button BackgroundColor="Black" CornerRadius="18" TextColor="White" FontSize="18" FontAttributes="Bold" Text="3 : Estimated Usage "  HeightRequest="40" Opacity="0.9" Margin="10,0,10,0"/>
+        <Button BackgroundColor="Black" CornerRadius="18" TextColor="White" FontSize="18" FontAttributes="Bold" Text="The future Awaits..."  HeightRequest="40" Opacity="0.9" Margin="10,0,10,0"/>
+
+        <Label x:Name="AccuracyMeter" HorizontalTextAlignment="Center" Text="Accurary Meter"/>
+
+    </StackLayout>
+</ContentPage>

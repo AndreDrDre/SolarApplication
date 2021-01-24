@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SolarForMe.Views.LoginPage"
+             NavigationPage.HasNavigationBar="False">
+
+    <StackLayout Orientation="Vertical" Margin="40,60,40,40" Spacing="20">
+        <Label x:Name="WelcomeName" Text="Welcome, " HorizontalTextAlignment="Center" FontSize="28"/>
+        <Label Text="Enter your details below" HorizontalTextAlignment="Center"/>
+        <Entry x:Name="LoginEmail" Placeholder="Email"/>
+        <Entry x:Name="LoginPassword" Placeholder="Password"/>
+        <Label x:Name="lblForgotPasssword" Text="Forgot Password?" HorizontalTextAlignment="End" FontSize="Small" />
+        <Button x:Name="BtnLogin" Text="Login" BackgroundColor="Black" TextColor="White" FontAttributes="Bold" FontSize="18" CornerRadius="20" Margin="20,20,20,0"/>
+
+        <Label Text="Or Login with Social Media" HorizontalTextAlignment="Center" FontSize="Small"/>
+        <Button x:Name="BtnLoginFacebook" Text="FaceBook" BackgroundColor="Black" TextColor="White" FontAttributes="Bold" FontSize="18" CornerRadius="20" Margin="20,0,20,0"/>
+
+        <Label x:Name="Noaccount" Text="Dont have an account? Create One" HorizontalTextAlignment="Center" FontSize="Small"/>
+
+    </StackLayout>
+
+</ContentPage>
